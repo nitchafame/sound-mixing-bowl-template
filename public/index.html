@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <!-- libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="./lib/tachyons-4.9.1.min.css" />
   <link type="text/css" rel="stylesheet" href="./lib/colors-2.2.0.min.css" />
   <link type="text/css" rel="stylesheet" href="./lib/loading-animation.css" />
@@ -23,20 +24,31 @@
     html,
     body {
       /* height: 100%; */
+      font-family: 'Lexend Zetta', sans-serif;
+      line-height: 30px;
+      background: linear-gradient(to bottom, #ffcccc, #009999 99%)!important;
     }
 
     /* Scale canvas with resize attribute to full size */
     canvas[resize] {
+      /*filter: blur(8px);*/
       width: 100%;
       height: 100%;
       max-width: 500px;
       min-height: 600px;
+      background-image: linear-gradient(to bottom right, #ff4d4d, #e0ebeb)!important;
     }
+    canvas[resize]:hover {
+      /*filter: drop-shadow(0px 0px 50px #ff6666) !important; */
+      cursor: cell;
+  }
 
     #wrapper {
       height: 57vh;
       min-height: 600px;
     }
+
+
   </style>
 </head>
 
@@ -46,12 +58,14 @@
     <canvas id="screen" resize></canvas>
   </div>
 
-  <div class="helvetica">
+  <div class="Monospace">
     <p>
-      <h1 class="b black">Hello</h1>
-      <h2 class="yellow">There?</h2>
-      <p class="pt3 pa2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <img src="phonehand.png"></img>
+      <h1 class="b black">scar mixing</h1>
+      <h2 class="white">Everyday cuts and scrapes.</h2>
+      <p class="pt3 pa2"> During this uncertain time, I often had nightmares, anxiety, and discontent. I dreamed about my family members, woke up felt like a crack in my chest. The worst part is I don’t remember a thing; will I forget? Will I be forgotten? This is like a bruise that I hadn’t have noticed before; when I do, it damages. The reoccurring feeling of the one’s far from home is expanding. The sense of missing pieces, the sore, and the pain lurking during the day caught me when I lost.
+
+It’s the 8th year after I moved here to NYC. Even I go back and forth between Bangkok and NYC, but where is actually my home. I miss the time we sit together. </p>
+    <!--  <img src="phonehand.png"></img> -->
     </p>
   </div>
 

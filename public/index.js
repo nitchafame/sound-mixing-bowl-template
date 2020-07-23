@@ -3,14 +3,14 @@
 //'index' page
 
 // colorizing
-var string_color = 'black';
+var string_color = 'ffffff';
 //var string_color = 'white'; //theme dark?
-var networkdot_color = 'hotpink';
-var networkdot_stroke_color = 'white';
-// var networkdot_color = '#51D0FD';
-// var networkdot_stroke_color = '#FFE40A';
+// var networkdot_color = 'hotpink';
+// var networkdot_stroke_color = 'white';
+var networkdot_color = '#afe4d1';
+var networkdot_stroke_color = '#fff23d';
 var mixer_bg = true;
-var mixer_bg_color = new Color(1, 0.95, 0.71, 0.5); // buttermilk, opacity 50%
+var mixer_bg_color = new Color(1, 0.95, 0.71, 0.2); // buttermilk, opacity 50%
 
 $(document).ready(function() {
 
@@ -42,13 +42,13 @@ $(document).ready(function() {
     // AudioImport_p5("./audio/clap@2/" + ("0" + getRandomInt(1, 2)).slice(-2) + ".mp3"),
 
     //sounds page ==> 7
-    AudioImport("./audio/01.mp3"),
-    AudioImport("./audio/02.mp3"),
-    AudioImport("./audio/03.mp3"),
-    AudioImport("./audio/04.mp3"),
-    AudioImport("./audio/05.mp3"),
-    AudioImport("./audio/06.mp3"),
-    AudioImport("./audio/07.mp3"),
+    AudioImport("./audio/kitchen(here).mp3"),
+    AudioImport("./audio/garden(here).mp3"),
+    AudioImport("./audio/calling.mp3"),
+    AudioImport("./audio/calling.mp3"),
+    AudioImport("./audio/ringing.mp3"),
+    AudioImport("./audio/dinnertable(home).mp3"),
+    AudioImport("./audio/livingroom(home).mp3"),
     //
   ]).then(function(imports) {
 
@@ -100,7 +100,7 @@ $(document).ready(function() {
       center: view.bounds.topRight + [-vssw / 2, +vssw / 2],
       radius: vssw / 4,
       fillColor: networkdot_color,
-      strokeWidth: vssw * 0.03,
+      strokeWidth: vssw * 0.02,
       strokeColor: networkdot_stroke_color,
       dashArray: [vssw * 0.05, vssw * 0.05],
       onFrame: function(event) {
@@ -146,9 +146,9 @@ $(document).ready(function() {
                   radius: vssw * 0.4,
                   size: [vssw * 1.5, vssw * 0.7],
                   fillColor: new Color({
-                    hue: getRandom(20, 60),
-                    saturation: 1,
-                    brightness: 1
+                    hue: getRandom(10, 40),
+                    saturation: 0.7,
+                    brightness: 0.95
                   }),
                 }),
                 plus.clone()
@@ -190,9 +190,9 @@ $(document).ready(function() {
                   radius: vssw * 0.4,
                   size: [vssw * 1.6, vssw * 0.7],
                   fillColor: new Color({
-                    hue: getRandom(120, 180),
-                    saturation: 1,
-                    brightness: 1
+                    hue: getRandom(130, 190),
+                    saturation: 0.4,
+                    brightness: 0.8
                   }),
                 }),
                 minus.clone()
@@ -224,9 +224,9 @@ $(document).ready(function() {
                   radius: vssw * 0.4,
                   size: [vssw * 1.6, vssw * 0.7],
                   strokeColor: new Color({
-                    hue: getRandom(20, 60),
-                    saturation: 1,
-                    brightness: 1
+                    hue: getRandom(10, 45),
+                    saturation: 0.9,
+                    brightness: 0.8
                   }),
                   strokeWidth: vssw * 0.03,
                   fillColor: new Color(1, 1, 1, 0.5)
@@ -270,10 +270,10 @@ $(document).ready(function() {
                   radius: vssw * 0.4,
                   size: [vssw * 1.6, vssw * 0.7],
                   strokeColor: new Color({
-                    hue: getRandom(120, 180),
-                    saturation: 1,
-                    brightness: 1
-                  }),
+                      hue: getRandom(130, 190),
+                      saturation: 0.4,
+                      brightness: 0.8
+                    }),
                   strokeWidth: vssw * 0.03,
                   fillColor: new Color(1, 1, 1, 0.5)
                 }),
@@ -309,9 +309,9 @@ $(document).ready(function() {
             this.children.play_btn.children[1].fitBounds(this.children.play_btn.children[0].bounds);
             this.children.stop_btn.children[1].fitBounds(this.children.stop_btn.children[0].bounds);
             this.children.faster_btn.children[1].fitBounds(this.children.faster_btn.children[0].bounds);
-            this.children.faster_btn.children[1].fillColor = "orange";
+            this.children.faster_btn.children[1].fillColor = "#e76f51";
             this.children.slower_btn.children[1].fitBounds(this.children.slower_btn.children[0].bounds);
-            this.children.slower_btn.children[1].fillColor = "lime";
+            this.children.slower_btn.children[1].fillColor = "#264653";
             // positioning numberboxes...
             this.children.playcounter.fitBounds(this.children.playcounterbox.bounds);
             this.children.speedcounter.fitBounds(this.children.speedcounterbox.bounds);
