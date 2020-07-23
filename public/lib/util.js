@@ -171,26 +171,26 @@ function getTimepoint(time, path, from, to, loop) {
 // //initial state check
 // onVisibilityChange();
 //
-// //a first touch getter! (only for iphone)
-// function getTheFirstTouchiOS() {
-//   if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-//     var _silence = new Tone.Player({
-//       url: 'lib/_silence.wav',
-//       onload: function() {
-//         new paper.Path.Rectangle({
-//           point: [0, 0],
-//           size: paper.view.size,
-//           fillColor: 'white',
-//           opacity: 0.8,
-//           onClick: function() {
-//             _silence.start();
-//             this.remove();
-//           }
-//         }).bringToFront();
-//       }
-//     }).toMaster();
-//   }
-// }
+//a first touch getter! (only for iphone)
+function getTheFirstTouchiOS() {
+  if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+    var _silence = new Tone.Player({
+      url: 'lib/_silence.wav',
+      onload: function() {
+        new paper.Path.Rectangle({
+          point: [0, 0],
+          size: paper.view.size,
+          fillColor: 'white',
+          opacity: 0.8,
+          onClick: function() {
+            _silence.start();
+            this.remove();
+          }
+        }).bringToFront();
+      }
+    }).toMaster();
+  }
+}
 
 //SVG helpers
 function SVGSymbol(uri) {
@@ -318,3 +318,11 @@ function AudioImport(url) {
 function uniqueID() {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 }
+
+
+
+
+
+
+
+getTheFirstTouchiOS();

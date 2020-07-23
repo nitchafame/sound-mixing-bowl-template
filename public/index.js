@@ -45,7 +45,7 @@ $(document).ready(function() {
     AudioImport("./audio/kitchen(here).mp3"),
     AudioImport("./audio/garden(here).mp3"),
     AudioImport("./audio/calling.mp3"),
-    AudioImport("./audio/calling.mp3"),
+    AudioImport("./audio/rubbing.mp3"),
     AudioImport("./audio/ringing.mp3"),
     AudioImport("./audio/dinnertable(home).mp3"),
     AudioImport("./audio/livingroom(home).mp3"),
