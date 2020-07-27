@@ -31,14 +31,6 @@
 //   loop: true
 // });
 
-
-// Create an audio context instance if WebAudio is supported
-let context = (window.AudioContext || window.webkitAudioContext) ?
-new (window.AudioContext || window.webkitAudioContext)() : null;
-// Pass it to unmute if the context exists... ie WebAudio is supported
-if (context) unmute(context);
-
-
 function map(val, from, to, loop) {
   if (typeof from === 'object') {
     if (Array.isArray(from)) { // direct form (array)

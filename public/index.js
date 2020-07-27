@@ -369,14 +369,14 @@ $(document).ready(function() {
 
     //network event handlers
 
-    // //event: 'sound'
-    // socket.on('sound', function(sound) {
-    //   if (sound.name == 'clap') {
-    //     if (sound.action == 'start') {
-    //       clap.start();
-    //     }
-    //   }
-    // });
+    //event: 'sound'
+    socket.on('sound', function(sound) {
+      if (sound.name == 'clap') {
+        if (sound.action == 'start') {
+          clap.start();
+        }
+      }
+    });
 
   });
 
